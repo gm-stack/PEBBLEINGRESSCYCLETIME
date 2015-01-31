@@ -1,0 +1,31 @@
+{
+    "appKeys": {},
+    "capabilities": [
+        ""
+    ],
+    "companyName": "@brinky",
+    "longName": "ingress cycle time",
+    "projectType": "native",
+    "resources": {
+        "media": [
+            {
+                "file": "images/res_logo.png",
+                "menuIcon": true,
+                "name": "IMAGE_RES_LOGO",
+                "type": "png"
+            },
+            {
+                "file": "images/res.png",
+                "name": "IMAGE_RES",
+                "type": "png"
+            }
+        ]
+    },
+    "shortName": "cycle time",
+    "uuid": "4b8a2be7-bff0-4269-aefb-8f28fbf3fc48",
+    "versionCode": 4,
+    "versionLabel": "0.3",
+    "watchapp": {
+        "watchface": true
+    }
+}
