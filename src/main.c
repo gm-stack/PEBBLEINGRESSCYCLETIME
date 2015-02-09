@@ -5,9 +5,9 @@ TextLayer *tl_cycle;
 TextLayer *tl_cp;
 TextLayer *tl_countdown;
 TextLayer *tl_list;
-GBitmap *img_res;
+GBitmap *img_enl;
 TextLayer *text_time_layer;
-BitmapLayer *bl_res;
+BitmapLayer *bl_enl;
 
 
 /* #define START_TIME_SEC 1388523600 */
@@ -19,11 +19,11 @@ BitmapLayer *bl_res;
 
 char buffer[4][BUF_SIZE];
 
- 
+
 
 static void update_time(bool fullupdate) {
   static char time_text[] = "00:00";
-  static char year[] = "0000";
+  //static char year[] = "0000";
   char *time_format;
   time_t now = time(NULL);
   struct tm *tick_time;
@@ -125,12 +125,12 @@ void handle_init(void) {
 	text_layer_set_background_color(tl_list, GColorBlack);
 	text_layer_set_text_color(tl_list, GColorWhite);
 	
-	img_res = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_RES_LOGO);
-	bl_res = bitmap_layer_create(GRect(0, 28, frame.size.w, frame.size.h-32));
-	bitmap_layer_set_bitmap(bl_res, img_res);
-	bitmap_layer_set_alignment(bl_res, GAlignCenter);
+	img_enl = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_ENL_LOGO);
+	bl_enl = bitmap_layer_create(GRect(0, 28, frame.size.w, frame.size.h-32));
+	bitmap_layer_set_bitmap(bl_enl, img_enl);
+	bitmap_layer_set_alignment(bl_enl, GAlignCenter);
 	
-	layer_add_child(root_layer, bitmap_layer_get_layer(bl_res));
+	layer_add_child(root_layer, bitmap_layer_get_layer(bl_enl));
 	layer_add_child(root_layer, text_layer_get_layer(tl_cycle));	
 	layer_add_child(root_layer, text_layer_get_layer(tl_cp));	
 	layer_add_child(root_layer, text_layer_get_layer(tl_countdown));	
@@ -154,8 +154,8 @@ void handle_deinit(void) {
 	text_layer_destroy(tl_cp);
 	text_layer_destroy(tl_countdown);
 	text_layer_destroy(tl_list);
-	bitmap_layer_destroy(bl_res);
-	gbitmap_destroy(img_res);
+	bitmap_layer_destroy(bl_enl);
+	gbitmap_destroy(img_enl);
 	window_destroy(my_window);
 }
 

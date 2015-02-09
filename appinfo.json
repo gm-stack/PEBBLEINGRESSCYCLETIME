@@ -9,14 +9,13 @@
     "resources": {
         "media": [
             {
-                "file": "images/res_logo.png",
-                "menuIcon": true,
-                "name": "IMAGE_RES_LOGO",
+                "file": "images/enl_logo.png",
+                "name": "IMAGE_ENL_LOGO",
                 "type": "png"
             },
             {
-                "file": "images/res.png",
-                "name": "IMAGE_RES",
+                "file": "images/enl.png",
+                "name": "IMAGE_ENL",
                 "type": "png"
             }
         ]
